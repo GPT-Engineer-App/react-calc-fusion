@@ -23,33 +23,33 @@ const Index = () => {
   };
 
   return (
-    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <VStack spacing={4}>
-        <Input value={input} isReadOnly placeholder="0" size="lg" />
-        <Box fontSize="2xl" fontWeight="bold">{result}</Box>
-        <HStack spacing={2}>
-          <Button onClick={() => handleClick("1")}>1</Button>
-          <Button onClick={() => handleClick("2")}>2</Button>
-          <Button onClick={() => handleClick("3")}>3</Button>
-          <Button onClick={() => handleClick("+")}>+</Button>
+    <Container centerContent maxW="container.md" height="100vh" display="flex" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
+      <VStack spacing={4} width="100%">
+        <Input value={input} isReadOnly placeholder="0" size="lg" textAlign="right" />
+        <Box fontSize="2xl" fontWeight="bold" height="40px">{result}</Box>
+        <HStack spacing={2} width="100%">
+          <Button onClick={() => handleClick("1")} flex="1">1</Button>
+          <Button onClick={() => handleClick("2")} flex="1">2</Button>
+          <Button onClick={() => handleClick("3")} flex="1">3</Button>
+          <Button onClick={() => handleClick("+")} flex="1">+</Button>
         </HStack>
-        <HStack spacing={2}>
-          <Button onClick={() => handleClick("4")}>4</Button>
-          <Button onClick={() => handleClick("5")}>5</Button>
-          <Button onClick={() => handleClick("6")}>6</Button>
-          <Button onClick={() => handleClick("-")}>-</Button>
+        <HStack spacing={2} width="100%">
+          <Button onClick={() => handleClick("4")} flex="1">4</Button>
+          <Button onClick={() => handleClick("5")} flex="1">5</Button>
+          <Button onClick={() => handleClick("6")} flex="1">6</Button>
+          <Button onClick={() => handleClick("-")} flex="1">-</Button>
         </HStack>
-        <HStack spacing={2}>
-          <Button onClick={() => handleClick("7")}>7</Button>
-          <Button onClick={() => handleClick("8")}>8</Button>
-          <Button onClick={() => handleClick("9")}>9</Button>
-          <Button onClick={() => handleClick("*")}>*</Button>
+        <HStack spacing={2} width="100%">
+          <Button onClick={() => handleClick("7")} flex="1">7</Button>
+          <Button onClick={() => handleClick("8")} flex="1">8</Button>
+          <Button onClick={() => handleClick("9")} flex="1">9</Button>
+          <Button onClick={() => handleClick("*")} flex="1">*</Button>
         </HStack>
-        <HStack spacing={2}>
-          <Button onClick={() => handleClick("0")}>0</Button>
-          <Button onClick={handleClear}>C</Button>
-          <Button onClick={handleCalculate}>=</Button>
-          <Button onClick={() => handleClick("/")}>/</Button>
+        <HStack spacing={2} width="100%">
+          <Button onClick={() => handleClick("0")} flex="1">0</Button>
+          <Button onClick={handleClear} flex="1">C</Button>
+          <Button onClick={handleCalculate} flex="1">=</Button>
+          <Button onClick={() => handleClick("/")} flex="1">/</Button>
         </HStack>
       </VStack>
     </Container>
